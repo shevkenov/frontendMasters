@@ -27,5 +27,26 @@ console.log(B.inspect());
 
 const eleven = A.chain(v => v + 1);
 // flatters the monad
-console.log(eleven)
+console.log(eleven);
 
+///////////////////////////////////////////////////////////////////////////////
+
+const C = Just(5);
+
+function sum(x,y) { return x + y};
+
+function curry(fn) {
+    return x => {
+        return y => {
+            return fn(x,y);
+        }
+    }
+}
+
+const D = A.map( curry(sum) );
+const E = D.ap( C );
+console.log(E.inspect());
+
+// another way to achive the same result
+const F = A.map( curry(sum) ).ap( B );
+console.log(F.inspect())
