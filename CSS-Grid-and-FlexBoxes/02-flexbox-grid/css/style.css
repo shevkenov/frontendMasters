@@ -30,7 +30,8 @@ a {
 }
 
 .col-1-4,
-.col-1-2
+.col-1-2,
+.col-5-1
 {
   background: #ffc;
 }
@@ -66,6 +67,13 @@ div img {
     .col-1-4{
         flex: 0 0 92%;
     }
+    .col-5-2{
+      flex: 0 0 92%;
+      order: -1;
+    }
+    .col-5-1{
+      flex: 0 0 44%;
+    }
 
 }
 /* Desktop screen Sizes */
@@ -82,5 +90,20 @@ div img {
   }
   .col-4 {
     flex: 0 0 92%;
+  }
+  .col-5-2{
+    flex: 0 0 44%;
+    order: 0;
+  }
+  .col-5-1{
+    flex: 0 0 20%;
+  }
+  .reverse [class*="col-"] {
+    margin-left: 0%;
+    margin-right: 4%;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
   }
 }
