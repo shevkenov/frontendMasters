@@ -1,0 +1,13 @@
+@media (min-width: 600px) {
+    .bkgdimg{
+        height: 50px;
+        background-image: url("./img/mom-300.jpg");
+    }
+}
+
+@media (min-width: 800px) {
+    .bkgdimg{
+        height: 150px;
+        background-image: url("./img/mom-767.jpg");
+    }
+}
